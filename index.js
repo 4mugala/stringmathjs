@@ -1,4 +1,4 @@
-/*This algorithem hundles mathemayical computations in strings*/
+/*This algorithem hundles mathematical computations in strings*/
 
 class ListX extends Array {
     constructor() {
@@ -82,11 +82,11 @@ class ListX extends Array {
     }
 }
 
-class InStringMath {
+export class InStringMath {
     constructor(expression) {
         if (expression) {
             this.expression = this.beautify(expression);
-            console.log(this.expression);
+
             this.brackets();
         }
     }
@@ -94,7 +94,6 @@ class InStringMath {
     solve(expression) {
         if (expression) {
             this.expression = this.beautify(expression);
-            console.log(this.expression);
             this.brackets();
         }
     }
@@ -145,7 +144,6 @@ class InStringMath {
                 answer.equals()
             );
             this.brackets();
-            console.log("B: " + answer.equals());
         }
         this.power();
     }
@@ -162,7 +160,7 @@ class InStringMath {
                     parseFloat(rOperand)
                 );
                 this.expression.splice(powPos - 1, 3, exponential);
-                console.log("E: " + exponential);
+
                 this.power();
             }
         } else {
@@ -177,7 +175,6 @@ class InStringMath {
         if (lOperand != null && rOperand != null) {
             let product = parseFloat(lOperand) * parseFloat(rOperand);
             this.expression.splice(operaPos - 1, 3, product);
-            console.log("P: " + product);
         }
         this.multiplyAndDivide();
     }
@@ -189,7 +186,6 @@ class InStringMath {
         if (lOperand != null && rOperand != null) {
             let quotient = parseFloat(lOperand) / parseFloat(rOperand);
             this.expression.splice(operaPos - 1, 3, quotient);
-            console.log("Q: " + quotient);
         }
         this.multiplyAndDivide();
     }
@@ -201,7 +197,6 @@ class InStringMath {
         if (lOperand != null && rOperand != null) {
             let sum = parseFloat(lOperand) + parseFloat(rOperand);
             this.expression.splice(operaPos - 1, 3, sum);
-            console.log("S: " + sum);
         }
         this.addAndSubtract();
     }
@@ -213,7 +208,6 @@ class InStringMath {
         if (lOperand != null && rOperand != null) {
             let difference = parseFloat(lOperand) - parseFloat(rOperand);
             this.expression.splice(operaPos - 1, 3, difference);
-            console.log("D: " + difference);
         }
         this.addAndSubtract();
     }
