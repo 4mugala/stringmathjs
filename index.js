@@ -137,7 +137,7 @@ class StringMath {
                 closeBracPos
             );
             let innerExprLen = innerExpression.length;
-            let answer = new InStringMath(innerExpression);
+            let answer = new StringMath(innerExpression);
             this.expression.splice(
                 openBracPos,
                 innerExprLen + 2,
