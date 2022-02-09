@@ -82,7 +82,7 @@ class ListX extends Array {
     }
 }
 
-module.exports class InStringMath {
+exports class InStringMath {
     constructor(expression) {
         if (expression) {
             this.expression = this.beautify(expression);
